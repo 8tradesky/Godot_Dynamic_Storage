@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="标签种类" load_steps=3 format=3 uid="uid://bfovqg1vbsvkh"]
+
+[ext_resource type="Script" uid="uid://dbsmy0iws6qrk" path="res://动态仓库系统/脚本/实体物品分类显示.gd" id="1_i2rml"]
+[ext_resource type="Texture2D" uid="uid://clg4mmfny5hvr" path="res://动态仓库系统/示例图片/装备图标/头盔/头盔图标.png" id="2_7utjq"]
+
+[resource]
+script = ExtResource("1_i2rml")
+"标签名称" = "头盔"
+"包含的物品种类" = Array[int]([0])
+"标签图标" = ExtResource("2_7utjq")
+metadata/_custom_type_script = "uid://dbsmy0iws6qrk"

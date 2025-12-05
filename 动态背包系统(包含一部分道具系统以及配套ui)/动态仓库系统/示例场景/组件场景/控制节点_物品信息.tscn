@@ -1,0 +1,130 @@
+[gd_scene load_steps=10 format=3 uid="uid://4uw8fae0ikdv"]
+
+[ext_resource type="Theme" uid="uid://chwscgfyt5ted" path="res://动态仓库系统/其他资源设置/默认UI主题.tres" id="1_73rte"]
+[ext_resource type="PackedScene" uid="uid://bog88lu24muxv" path="res://动态仓库系统/示例场景/组件场景/ui框架.tscn" id="1_apaqk"]
+[ext_resource type="Script" uid="uid://dc6x0h3iuft3n" path="res://动态仓库系统/示例场景/组件场景/控制节点_物品信息.gd" id="2_aundj"]
+[ext_resource type="PackedScene" uid="uid://c20xo0osmhsii" path="res://动态仓库系统/示例场景/组件场景/垂直容器_物品单个数据.tscn" id="3_c2nvs"]
+[ext_resource type="Texture2D" uid="uid://c3johqnoclnsf" path="res://动态仓库系统/示例图片/属性图片/防御力图标.png" id="4_d8ira"]
+[ext_resource type="Texture2D" uid="uid://c1vwoswi51aew" path="res://动态仓库系统/示例图片/属性图片/速度图标.png" id="5_2wgox"]
+[ext_resource type="Texture2D" uid="uid://c0wpbt4ajbjkh" path="res://动态仓库系统/示例图片/属性图片/等级图标.png" id="6_2wgox"]
+[ext_resource type="Texture2D" uid="uid://b5727hgeu13e8" path="res://动态仓库系统/示例图片/属性图片/金钱图标.png" id="7_aundj"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_73rte"]
+color = Color(1, 1, 1, 0.7607843)
+
+[node name="控制节点_物品信息" type="Control"]
+custom_minimum_size = Vector2(1600, 180)
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme = ExtResource("1_73rte")
+script = ExtResource("2_aundj")
+
+[node name="UI框架" parent="." instance=ExtResource("1_apaqk")]
+layout_mode = 1
+
+[node name="边缘容器_物品信息栏" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="水平容器_物品信息栏" type="VBoxContainer" parent="边缘容器_物品信息栏"]
+layout_mode = 2
+
+[node name="垂直容器_物品名称和类型" type="HBoxContainer" parent="边缘容器_物品信息栏/水平容器_物品信息栏"]
+layout_mode = 2
+
+[node name="文字标签_物品名称" type="Label" parent="边缘容器_物品信息栏/水平容器_物品信息栏/垂直容器_物品名称和类型"]
+layout_mode = 2
+text = "量子潜伏者"
+
+[node name="文字标签_物品类型" type="Label" parent="边缘容器_物品信息栏/水平容器_物品信息栏/垂直容器_物品名称和类型"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.4392157)
+theme_override_font_sizes/font_size = 18
+text = "(护甲)"
+
+[node name="水平分隔线" type="HSeparator" parent="边缘容器_物品信息栏/水平容器_物品信息栏"]
+layout_mode = 2
+tooltip_text = "分割线"
+theme_override_constants/separation = 1
+theme_override_styles/separator = SubResource("StyleBoxLine_73rte")
+
+[node name="垂直容器_主要属性数据" type="HBoxContainer" parent="边缘容器_物品信息栏/水平容器_物品信息栏"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 15
+
+[node name="垂直容器_攻击力数据" parent="边缘容器_物品信息栏/水平容器_物品信息栏/垂直容器_主要属性数据" instance=ExtResource("3_c2nvs")]
+layout_mode = 2
+
+[node name="文字标签_数据数值" parent="边缘容器_物品信息栏/水平容器_物品信息栏/垂直容器_主要属性数据/垂直容器_攻击力数据" index="1"]
+text = "100"
+
+[node name="垂直容器_防御力数据" parent="边缘容器_物品信息栏/水平容器_物品信息栏/垂直容器_主要属性数据" instance=ExtResource("3_c2nvs")]
+layout_mode = 2
+
+[node name="图片_数据图标" parent="边缘容器_物品信息栏/水平容器_物品信息栏/垂直容器_主要属性数据/垂直容器_防御力数据" index="0"]
+texture = ExtResource("4_d8ira")
+
+[node name="文字标签_数据数值" parent="边缘容器_物品信息栏/水平容器_物品信息栏/垂直容器_主要属性数据/垂直容器_防御力数据" index="1"]
+text = "200"
+
+[node name="垂直容器_速度数据" parent="边缘容器_物品信息栏/水平容器_物品信息栏/垂直容器_主要属性数据" instance=ExtResource("3_c2nvs")]
+layout_mode = 2
+
+[node name="图片_数据图标" parent="边缘容器_物品信息栏/水平容器_物品信息栏/垂直容器_主要属性数据/垂直容器_速度数据" index="0"]
+texture = ExtResource("5_2wgox")
+
+[node name="文字标签_数据数值" parent="边缘容器_物品信息栏/水平容器_物品信息栏/垂直容器_主要属性数据/垂直容器_速度数据" index="1"]
+text = "400"
+
+[node name="垂直容器_特殊属性数据" type="HBoxContainer" parent="边缘容器_物品信息栏/水平容器_物品信息栏"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 15
+
+[node name="垂直容器_等级数据" parent="边缘容器_物品信息栏/水平容器_物品信息栏/垂直容器_特殊属性数据" instance=ExtResource("3_c2nvs")]
+layout_mode = 2
+
+[node name="图片_数据图标" parent="边缘容器_物品信息栏/水平容器_物品信息栏/垂直容器_特殊属性数据/垂直容器_等级数据" index="0"]
+texture = ExtResource("6_2wgox")
+
+[node name="文字标签_数据数值" parent="边缘容器_物品信息栏/水平容器_物品信息栏/垂直容器_特殊属性数据/垂直容器_等级数据" index="1"]
+text = "等级4"
+
+[node name="垂直容器_金钱数据" parent="边缘容器_物品信息栏/水平容器_物品信息栏/垂直容器_特殊属性数据" instance=ExtResource("3_c2nvs")]
+layout_mode = 2
+
+[node name="图片_数据图标" parent="边缘容器_物品信息栏/水平容器_物品信息栏/垂直容器_特殊属性数据/垂直容器_金钱数据" index="0"]
+texture = ExtResource("7_aundj")
+
+[node name="文字标签_数据数值" parent="边缘容器_物品信息栏/水平容器_物品信息栏/垂直容器_特殊属性数据/垂直容器_金钱数据" index="1"]
+text = "500"
+
+[node name="富文本_物品描述" type="RichTextLabel" parent="边缘容器_物品信息栏/水平容器_物品信息栏"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "[b]一句加粗富文本[/b]
+[i]一句斜体富文本[/i]
+[b][i]一句斜体加粗富文本[/i][/b]"
+fit_content = true
+
+[editable path="边缘容器_物品信息栏/水平容器_物品信息栏/垂直容器_主要属性数据/垂直容器_攻击力数据"]
+[editable path="边缘容器_物品信息栏/水平容器_物品信息栏/垂直容器_主要属性数据/垂直容器_防御力数据"]
+[editable path="边缘容器_物品信息栏/水平容器_物品信息栏/垂直容器_主要属性数据/垂直容器_速度数据"]
+[editable path="边缘容器_物品信息栏/水平容器_物品信息栏/垂直容器_特殊属性数据/垂直容器_等级数据"]
+[editable path="边缘容器_物品信息栏/水平容器_物品信息栏/垂直容器_特殊属性数据/垂直容器_金钱数据"]

@@ -1,0 +1,216 @@
+[gd_scene load_steps=10 format=3 uid="uid://bmmexqfnvj8kd"]
+
+[ext_resource type="Theme" uid="uid://chwscgfyt5ted" path="res://动态仓库系统/其他资源设置/默认UI主题.tres" id="1_r5uvy"]
+[ext_resource type="PackedScene" uid="uid://bwm0josj6aupx" path="res://动态仓库系统/示例场景/组件场景/水平容器_仓库种类图片标签.tscn" id="2_cuahg"]
+[ext_resource type="Script" uid="uid://cnaalo1mgko1a" path="res://动态仓库系统/示例场景/控制节点_仓库界面.gd" id="2_pyaim"]
+[ext_resource type="Texture2D" uid="uid://clwih3dxwlvfa" path="res://动态仓库系统/示例图片/左箭头.png" id="3_pyaim"]
+[ext_resource type="PackedScene" uid="uid://c2g0rf56a8nci" path="res://动态仓库系统/示例场景/组件场景/网格容器_物品仓库.tscn" id="4_vc8a7"]
+[ext_resource type="PackedScene" uid="uid://4uw8fae0ikdv" path="res://动态仓库系统/示例场景/组件场景/控制节点_物品信息.tscn" id="5_7cto1"]
+[ext_resource type="PackedScene" uid="uid://bhk6001sbrfth" path="res://动态仓库系统/示例场景/组件场景/控制节点_角色装备槽位组.tscn" id="6_10glv"]
+[ext_resource type="PackedScene" uid="uid://dsxt6qtd2k0lc" path="res://动态仓库系统/示例场景/组件场景/控制节点_右键菜单.tscn" id="7_2lw10"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v27i3"]
+
+[node name="控制节点_仓库界面" type="Control"]
+custom_minimum_size = Vector2(1280, 560)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -280.0
+offset_right = 640.0
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_r5uvy")
+script = ExtResource("2_pyaim")
+
+[node name="色块_背景" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.23921569)
+
+[node name="边缘控制_主要界面" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="垂直容器_主要界面" type="HBoxContainer" parent="边缘控制_主要界面"]
+layout_mode = 2
+
+[node name="控制节点_仓库物品" type="Control" parent="边缘控制_主要界面/垂直容器_主要界面"]
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+
+[node name="水平容器_仓库" type="VBoxContainer" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_仓库物品"]
+layout_mode = 0
+offset_right = 560.0
+offset_bottom = 481.0
+
+[node name="水平容器_物品种类标签" type="VBoxContainer" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_仓库物品/水平容器_仓库"]
+custom_minimum_size = Vector2(0, 97)
+layout_mode = 2
+
+[node name="控制节点_动态文字标签父类" type="Control" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_仓库物品/水平容器_仓库/水平容器_物品种类标签"]
+custom_minimum_size = Vector2(0, 23)
+layout_mode = 2
+
+[node name="文字标签_物品动态" type="Label" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_仓库物品/水平容器_仓库/水平容器_物品种类标签/控制节点_动态文字标签父类"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -72.0
+offset_right = 72.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 16
+text = "巨拓麻长的一条标签"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="文字标签复位计时器" type="Timer" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_仓库物品/水平容器_仓库/水平容器_物品种类标签/控制节点_动态文字标签父类"]
+wait_time = 0.2
+one_shot = true
+
+[node name="中心容器_种类图片标签" type="CenterContainer" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_仓库物品/水平容器_仓库/水平容器_物品种类标签"]
+custom_minimum_size = Vector2(0, 74)
+layout_mode = 2
+
+[node name="网格容器_种类图片标签" type="GridContainer" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_仓库物品/水平容器_仓库/水平容器_物品种类标签/中心容器_种类图片标签"]
+layout_mode = 2
+columns = 8
+
+[node name="水平容器_仓库种类图片标签" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_仓库物品/水平容器_仓库/水平容器_物品种类标签/中心容器_种类图片标签/网格容器_种类图片标签" instance=ExtResource("2_cuahg")]
+layout_mode = 2
+
+[node name="水平容器_仓库种类图片标签2" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_仓库物品/水平容器_仓库/水平容器_物品种类标签/中心容器_种类图片标签/网格容器_种类图片标签" instance=ExtResource("2_cuahg")]
+layout_mode = 2
+
+[node name="水平容器_仓库种类图片标签3" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_仓库物品/水平容器_仓库/水平容器_物品种类标签/中心容器_种类图片标签/网格容器_种类图片标签" instance=ExtResource("2_cuahg")]
+layout_mode = 2
+
+[node name="水平容器_仓库种类图片标签4" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_仓库物品/水平容器_仓库/水平容器_物品种类标签/中心容器_种类图片标签/网格容器_种类图片标签" instance=ExtResource("2_cuahg")]
+layout_mode = 2
+
+[node name="水平容器_仓库种类图片标签5" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_仓库物品/水平容器_仓库/水平容器_物品种类标签/中心容器_种类图片标签/网格容器_种类图片标签" instance=ExtResource("2_cuahg")]
+layout_mode = 2
+
+[node name="水平容器_仓库种类图片标签6" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_仓库物品/水平容器_仓库/水平容器_物品种类标签/中心容器_种类图片标签/网格容器_种类图片标签" instance=ExtResource("2_cuahg")]
+layout_mode = 2
+
+[node name="水平容器_仓库种类图片标签7" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_仓库物品/水平容器_仓库/水平容器_物品种类标签/中心容器_种类图片标签/网格容器_种类图片标签" instance=ExtResource("2_cuahg")]
+layout_mode = 2
+
+[node name="垂直容器_物品仓库主体" type="HBoxContainer" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_仓库物品/水平容器_仓库"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 4
+
+[node name="种类切换左箭头" type="Control" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_仓库物品/水平容器_仓库/垂直容器_物品仓库主体"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="左箭头图片按钮" type="TextureButton" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_仓库物品/水平容器_仓库/垂直容器_物品仓库主体/种类切换左箭头"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -40.0
+offset_right = 30.0
+offset_bottom = 40.0
+grow_vertical = 2
+texture_normal = ExtResource("3_pyaim")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="滚动容器_仓库" type="ScrollContainer" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_仓库物品/水平容器_仓库/垂直容器_物品仓库主体"]
+custom_minimum_size = Vector2(480, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+horizontal_scroll_mode = 2
+vertical_scroll_mode = 0
+
+[node name="垂直容器_显示的仓库网格" type="HBoxContainer" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_仓库物品/水平容器_仓库/垂直容器_物品仓库主体/滚动容器_仓库"]
+custom_minimum_size = Vector2(480, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="网格容器_物品仓库" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_仓库物品/水平容器_仓库/垂直容器_物品仓库主体/滚动容器_仓库/垂直容器_显示的仓库网格" instance=ExtResource("4_vc8a7")]
+layout_mode = 2
+
+[node name="网格容器_物品仓库2" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_仓库物品/水平容器_仓库/垂直容器_物品仓库主体/滚动容器_仓库/垂直容器_显示的仓库网格" instance=ExtResource("4_vc8a7")]
+layout_mode = 2
+
+[node name="网格容器_物品仓库3" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_仓库物品/水平容器_仓库/垂直容器_物品仓库主体/滚动容器_仓库/垂直容器_显示的仓库网格" instance=ExtResource("4_vc8a7")]
+layout_mode = 2
+
+[node name="网格容器_物品仓库4" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_仓库物品/水平容器_仓库/垂直容器_物品仓库主体/滚动容器_仓库/垂直容器_显示的仓库网格" instance=ExtResource("4_vc8a7")]
+layout_mode = 2
+
+[node name="种类切换右箭头" type="Control" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_仓库物品/水平容器_仓库/垂直容器_物品仓库主体"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="右箭头图片按钮" type="TextureButton" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_仓库物品/水平容器_仓库/垂直容器_物品仓库主体/种类切换右箭头"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("3_pyaim")
+ignore_texture_size = true
+stretch_mode = 0
+flip_h = true
+
+[node name="分隔垂直线" type="VSeparator" parent="边缘控制_主要界面/垂直容器_主要界面"]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxEmpty_v27i3")
+
+[node name="控制节点_物品信息列" type="Control" parent="边缘控制_主要界面/垂直容器_主要界面"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+
+[node name="控制节点_物品信息" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_物品信息列" instance=ExtResource("5_7cto1")]
+layout_mode = 1
+offset_top = -180.0
+offset_right = 1600.0
+
+[node name="控制节点_角色装备槽位组" parent="边缘控制_主要界面/垂直容器_主要界面/控制节点_物品信息列" instance=ExtResource("6_10glv")]
+layout_mode = 1
+
+[node name="控制节点_右键菜单容器" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="控制节点_右键菜单" parent="控制节点_右键菜单容器" instance=ExtResource("7_2lw10")]
+layout_mode = 1

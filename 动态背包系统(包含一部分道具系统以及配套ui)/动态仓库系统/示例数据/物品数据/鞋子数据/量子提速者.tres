@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="实体_物品" load_steps=3 format=3 uid="uid://b2tecp5y8v8x8"]
+
+[ext_resource type="Script" uid="uid://fufu01oothuj" path="res://动态仓库系统/脚本/数据脚本/实体数据脚本/实体_物品.gd" id="1_rho4h"]
+[ext_resource type="Texture2D" uid="uid://diyl3dy8amiyh" path="res://动态仓库系统/示例图片/装备图标/鞋子/量子提速者.png" id="2_8lmbu"]
+
+[resource]
+script = ExtResource("1_rho4h")
+"物品种类" = 2
+"物品名称" = "量子提速者"
+"物品图片" = ExtResource("2_8lmbu")
+"攻击力" = 30.0
+"防御力" = 50.0
+"价格" = 500
+metadata/_custom_type_script = "uid://fufu01oothuj"

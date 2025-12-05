@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c20xo0osmhsii"]
+
+[ext_resource type="Texture2D" uid="uid://c6ebe57s05f7y" path="res://动态仓库系统/示例图片/属性图片/攻击力图标.png" id="1_bon8s"]
+[ext_resource type="Script" uid="uid://wmwlcvvjt3se" path="res://动态仓库系统/示例场景/组件场景/垂直容器_物品单个数据.gd" id="1_tdncb"]
+
+[node name="垂直容器_攻击力数据" type="HBoxContainer"]
+script = ExtResource("1_tdncb")
+
+[node name="图片_数据图标" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = ExtResource("1_bon8s")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="文字标签_数据数值" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "21"

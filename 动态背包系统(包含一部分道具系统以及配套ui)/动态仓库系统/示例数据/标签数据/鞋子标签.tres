@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="标签种类" load_steps=3 format=3 uid="uid://4kpdeefirl6t"]
+
+[ext_resource type="Script" uid="uid://dbsmy0iws6qrk" path="res://动态仓库系统/脚本/实体物品分类显示.gd" id="1_ucmef"]
+[ext_resource type="Texture2D" uid="uid://biof3pkpqdivm" path="res://动态仓库系统/示例图片/装备图标/鞋子/鞋子图标.png" id="2_igsrl"]
+
+[resource]
+script = ExtResource("1_ucmef")
+"标签名称" = "鞋子"
+"包含的物品种类" = Array[int]([2])
+"标签图标" = ExtResource("2_igsrl")
+metadata/_custom_type_script = "uid://dbsmy0iws6qrk"

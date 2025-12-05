@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="标签种类" load_steps=3 format=3 uid="uid://cpnlelcchlxac"]
+
+[ext_resource type="Script" uid="uid://dbsmy0iws6qrk" path="res://动态仓库系统/脚本/实体物品分类显示.gd" id="1_2cd1t"]
+[ext_resource type="Texture2D" uid="uid://dkncys5wkj680" path="res://动态仓库系统/示例图片/装备图标/武器/武器图标.png" id="2_hbc5a"]
+
+[resource]
+script = ExtResource("1_2cd1t")
+"标签名称" = "武器"
+"包含的物品种类" = Array[int]([3, 4])
+"标签图标" = ExtResource("2_hbc5a")
+metadata/_custom_type_script = "uid://dbsmy0iws6qrk"

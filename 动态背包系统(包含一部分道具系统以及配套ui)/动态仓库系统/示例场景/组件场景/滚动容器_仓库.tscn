@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://dijkbtdkux5cg"]
+
+[ext_resource type="PackedScene" uid="uid://c2g0rf56a8nci" path="res://动态仓库系统/示例场景/组件场景/网格容器_物品仓库.tscn" id="1_tndje"]
+
+[node name="滚动容器_仓库" type="ScrollContainer"]
+custom_minimum_size = Vector2(480, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+horizontal_scroll_mode = 2
+vertical_scroll_mode = 0
+
+[node name="垂直容器_显示的仓库网格" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(480, 0)
+layout_mode = 2
+
+[node name="网格容器_物品仓库" parent="垂直容器_显示的仓库网格" instance=ExtResource("1_tndje")]
+layout_mode = 2

@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2g0rf56a8nci"]
+
+[ext_resource type="PackedScene" uid="uid://cek1rbhwmgt5g" path="res://动态仓库系统/示例场景/组件场景/控制节点_仓库物品格_网格调整.tscn" id="1_6c6jb"]
+
+[node name="网格容器_物品仓库" type="GridContainer"]
+custom_minimum_size = Vector2(480, 0)
+offset_right = 480.0
+offset_bottom = 474.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 16
+columns = 5
+
+[node name="控制节点_仓库物品格_网格调整" parent="." instance=ExtResource("1_6c6jb")]
+layout_mode = 2
+
+[node name="控制节点_仓库物品格_网格调整2" parent="." instance=ExtResource("1_6c6jb")]
+layout_mode = 2
+
+[node name="控制节点_仓库物品格_网格调整3" parent="." instance=ExtResource("1_6c6jb")]
+layout_mode = 2
+
+[node name="控制节点_仓库物品格_网格调整4" parent="." instance=ExtResource("1_6c6jb")]
+layout_mode = 2
+
+[node name="控制节点_仓库物品格_网格调整5" parent="." instance=ExtResource("1_6c6jb")]
+layout_mode = 2
+
+[node name="控制节点_仓库物品格_网格调整6" parent="." instance=ExtResource("1_6c6jb")]
+layout_mode = 2
+
+[node name="控制节点_仓库物品格_网格调整7" parent="." instance=ExtResource("1_6c6jb")]
+layout_mode = 2
+
+[node name="控制节点_仓库物品格_网格调整8" parent="." instance=ExtResource("1_6c6jb")]
+layout_mode = 2
+
+[node name="控制节点_仓库物品格_网格调整9" parent="." instance=ExtResource("1_6c6jb")]
+layout_mode = 2
+
+[node name="控制节点_仓库物品格_网格调整10" parent="." instance=ExtResource("1_6c6jb")]
+layout_mode = 2
+
+[node name="控制节点_仓库物品格_网格调整11" parent="." instance=ExtResource("1_6c6jb")]
+layout_mode = 2
+
+[node name="控制节点_仓库物品格_网格调整12" parent="." instance=ExtResource("1_6c6jb")]
+layout_mode = 2
+
+[node name="控制节点_仓库物品格_网格调整13" parent="." instance=ExtResource("1_6c6jb")]
+layout_mode = 2
+
+[node name="控制节点_仓库物品格_网格调整14" parent="." instance=ExtResource("1_6c6jb")]
+layout_mode = 2
+
+[node name="控制节点_仓库物品格_网格调整15" parent="." instance=ExtResource("1_6c6jb")]
+layout_mode = 2
+
+[node name="控制节点_仓库物品格_网格调整16" parent="." instance=ExtResource("1_6c6jb")]
+layout_mode = 2
+
+[node name="控制节点_仓库物品格_网格调整17" parent="." instance=ExtResource("1_6c6jb")]
+layout_mode = 2
+
+[node name="控制节点_仓库物品格_网格调整18" parent="." instance=ExtResource("1_6c6jb")]
+layout_mode = 2
+
+[node name="控制节点_仓库物品格_网格调整19" parent="." instance=ExtResource("1_6c6jb")]
+layout_mode = 2
+
+[node name="控制节点_仓库物品格_网格调整20" parent="." instance=ExtResource("1_6c6jb")]
+layout_mode = 2

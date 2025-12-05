@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="实体_物品" load_steps=3 format=3 uid="uid://blnk1hn8npqqn"]
+
+[ext_resource type="Script" uid="uid://fufu01oothuj" path="res://动态仓库系统/脚本/数据脚本/实体数据脚本/实体_物品.gd" id="1_od3mc"]
+[ext_resource type="Texture2D" uid="uid://bieuefts7nind" path="res://动态仓库系统/示例图片/装备图标/胸甲/主教长袍.png" id="2_bj7r3"]
+
+[resource]
+script = ExtResource("1_od3mc")
+"物品种类" = 1
+"物品名称" = "主教长袍"
+"物品图片" = ExtResource("2_bj7r3")
+"防御力" = 100.0
+"价格" = 600
+metadata/_custom_type_script = "uid://fufu01oothuj"

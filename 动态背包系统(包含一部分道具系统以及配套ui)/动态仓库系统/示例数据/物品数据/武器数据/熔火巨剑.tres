@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="实体_物品" load_steps=3 format=3 uid="uid://drepvn30rypyr"]
+
+[ext_resource type="Script" uid="uid://fufu01oothuj" path="res://动态仓库系统/脚本/数据脚本/实体数据脚本/实体_物品.gd" id="1_y3a6y"]
+[ext_resource type="Texture2D" uid="uid://ck8o85wa654mx" path="res://动态仓库系统/示例图片/装备图标/武器/熔火巨剑.png" id="2_gpft8"]
+
+[resource]
+script = ExtResource("1_y3a6y")
+"物品种类" = 4
+"物品名称" = "熔火巨剑"
+"物品图片" = ExtResource("2_gpft8")
+"攻击力" = 500.0
+"价格" = 500
+metadata/_custom_type_script = "uid://fufu01oothuj"

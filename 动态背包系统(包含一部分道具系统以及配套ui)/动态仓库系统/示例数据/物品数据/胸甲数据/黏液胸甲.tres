@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="实体_物品" load_steps=3 format=3 uid="uid://cbxxdjflmvdxu"]
+
+[ext_resource type="Script" uid="uid://fufu01oothuj" path="res://动态仓库系统/脚本/数据脚本/实体数据脚本/实体_物品.gd" id="1_ki34u"]
+[ext_resource type="Texture2D" uid="uid://y8vfdnsc7t5p" path="res://动态仓库系统/示例图片/装备图标/胸甲/黏液胸甲.png" id="2_ie4xl"]
+
+[resource]
+script = ExtResource("1_ki34u")
+"物品种类" = 1
+"物品名称" = "黏液胸甲"
+"物品图片" = ExtResource("2_ie4xl")
+"防御力" = 1000.0
+"价格" = 600
+metadata/_custom_type_script = "uid://fufu01oothuj"

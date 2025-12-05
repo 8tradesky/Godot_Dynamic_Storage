@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cg0b5d5lxvufy"]
+
+[ext_resource type="FontFile" uid="uid://hdg8whx7ypif" path="res://动态仓库系统/字体/SmileySans-Oblique.ttf" id="1_0gig1"]
+
+[resource]
+font = ExtResource("1_0gig1")
+font_size = 26

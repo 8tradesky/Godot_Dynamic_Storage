@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="实体_物品" load_steps=3 format=3 uid="uid://uy86d7rmjdy5"]
+
+[ext_resource type="Script" uid="uid://fufu01oothuj" path="res://动态仓库系统/脚本/数据脚本/实体数据脚本/实体_物品.gd" id="1_8n40c"]
+[ext_resource type="Texture2D" uid="uid://bqf1hj3ef2irj" path="res://动态仓库系统/示例图片/装备图标/武器/圣光巨剑.png" id="2_72psw"]
+
+[resource]
+script = ExtResource("1_8n40c")
+"物品种类" = 4
+"物品名称" = "圣光巨剑"
+"物品图片" = ExtResource("2_72psw")
+"攻击力" = 300.0
+"价格" = 500
+metadata/_custom_type_script = "uid://fufu01oothuj"

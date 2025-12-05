@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="实体_物品" load_steps=3 format=3 uid="uid://dhfpkdki6b78w"]
+
+[ext_resource type="Script" uid="uid://fufu01oothuj" path="res://动态仓库系统/脚本/数据脚本/实体数据脚本/实体_物品.gd" id="1_hhvkj"]
+[ext_resource type="Texture2D" uid="uid://mh7puf315goa" path="res://动态仓库系统/示例图片/装备图标/胸甲/圣光装甲.png" id="2_d00wa"]
+
+[resource]
+script = ExtResource("1_hhvkj")
+"物品种类" = 1
+"物品名称" = "圣光装甲"
+"物品图片" = ExtResource("2_d00wa")
+"防御力" = 800.0
+"价格" = 300
+metadata/_custom_type_script = "uid://fufu01oothuj"

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4c7h3gmli45s"]
+
+[ext_resource type="Script" uid="uid://b8qvxkdyhli73" path="res://动态仓库系统/脚本/基类_掉落物/基类_掉落物.gd" id="1_ns81a"]
+[ext_resource type="Texture2D" uid="uid://bqf1hj3ef2irj" path="res://动态仓库系统/示例图片/装备图标/武器/圣光巨剑.png" id="2_n5th2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2s7vc"]
+
+[node name="掉落物" type="Area2D"]
+collision_layer = 1024
+collision_mask = 8
+script = ExtResource("1_ns81a")
+
+[node name="精灵图_掉落物" type="Sprite2D" parent="."]
+position = Vector2(0, 9.536743e-07)
+scale = Vector2(0.078125, 0.078125)
+texture = ExtResource("2_n5th2")
+
+[node name="碰撞箱_收集范围" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2s7vc")
+
+[connection signal="body_entered" from="." to="." method="_当玩家捡起道具"]

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="标签种类" load_steps=3 format=3 uid="uid://dfviskw1kdev3"]
+
+[ext_resource type="Script" uid="uid://dbsmy0iws6qrk" path="res://动态仓库系统/脚本/实体物品分类显示.gd" id="1_kif1t"]
+[ext_resource type="Texture2D" uid="uid://cxsg8p55o4vpj" path="res://动态仓库系统/示例图片/装备图标/副手/副手图标.png" id="2_v8ayu"]
+
+[resource]
+script = ExtResource("1_kif1t")
+"标签名称" = "副手"
+"包含的物品种类" = Array[int]([7])
+"标签图标" = ExtResource("2_v8ayu")
+metadata/_custom_type_script = "uid://dbsmy0iws6qrk"

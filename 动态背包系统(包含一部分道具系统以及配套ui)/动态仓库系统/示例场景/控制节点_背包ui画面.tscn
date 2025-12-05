@@ -1,0 +1,161 @@
+[gd_scene load_steps=8 format=3 uid="uid://b3u7cfp7dvnuq"]
+
+[ext_resource type="Shader" uid="uid://cslnshcwh8fqx" path="res://动态仓库系统/着色器/模糊.gdshader" id="1_6xali"]
+[ext_resource type="Theme" uid="uid://chwscgfyt5ted" path="res://动态仓库系统/其他资源设置/默认UI主题.tres" id="1_8c3mp"]
+[ext_resource type="PackedScene" uid="uid://bmmexqfnvj8kd" path="res://动态仓库系统/示例场景/控制节点_仓库界面.tscn" id="2_7xwwi"]
+[ext_resource type="PackedScene" uid="uid://ba083jm1we6im" path="res://动态仓库系统/示例场景/组件场景/控制节点_人物等级.tscn" id="3_5v1gg"]
+[ext_resource type="PackedScene" uid="uid://b12vfoiruom2j" path="res://动态仓库系统/示例场景/组件场景/控制节点_金钱.tscn" id="4_5v1gg"]
+[ext_resource type="Texture2D" uid="uid://b0mjtwm6ngp07" path="res://动态仓库系统/示例图片/其他图标/按键底.png" id="6_dy3pu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7xwwi"]
+shader = ExtResource("1_6xali")
+shader_parameter/blur_amount = 3.0
+shader_parameter/node_blur_amount = 3.0000001425
+
+[node name="控制节点_背包UI画面" type="Control"]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_8c3mp")
+
+[node name="模糊遮罩" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_7xwwi")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="控制节点_标题等级和金钱" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="边缘容器_标题" type="MarginContainer" parent="VBoxContainer/控制节点_标题等级和金钱"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_constants/margin_top = 10
+
+[node name="文字标签_标题" type="Label" parent="VBoxContainer/控制节点_标题等级和金钱/边缘容器_标题"]
+layout_mode = 2
+text = "背包_仓库"
+
+[node name="色块_底色" type="ColorRect" parent="VBoxContainer/控制节点_标题等级和金钱"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.4509804, 0.4509804, 0.4509804, 0.43137255)
+
+[node name="色块分割线" type="ColorRect" parent="VBoxContainer/控制节点_标题等级和金钱"]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.47843137, 0.47843137, 0.47843137, 0.47843137)
+
+[node name="控制节点_人物等级" parent="VBoxContainer/控制节点_标题等级和金钱" instance=ExtResource("3_5v1gg")]
+layout_mode = 1
+
+[node name="控制节点_金钱" parent="VBoxContainer/控制节点_标题等级和金钱" instance=ExtResource("4_5v1gg")]
+layout_mode = 1
+
+[node name="背包ui示例场景" parent="VBoxContainer" instance=ExtResource("2_7xwwi")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="控制节点_退出" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="色块分割线" type="ColorRect" parent="VBoxContainer/控制节点_退出"]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+color = Color(0.47843137, 0.47843137, 0.47843137, 0.47843137)
+
+[node name="色块_底色" type="ColorRect" parent="VBoxContainer/控制节点_退出"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.4509804, 0.4509804, 0.4509804, 0.43137255)
+
+[node name="边缘容器_关闭按钮" type="MarginContainer" parent="VBoxContainer/控制节点_退出"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/margin_right = 60
+
+[node name="垂直容器_关闭按钮" type="HBoxContainer" parent="VBoxContainer/控制节点_退出/边缘容器_关闭按钮"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="图片按钮_B" type="TextureButton" parent="VBoxContainer/控制节点_退出/边缘容器_关闭按钮/垂直容器_关闭按钮"]
+custom_minimum_size = Vector2(60, 40)
+layout_mode = 2
+texture_normal = ExtResource("6_dy3pu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="文字标签_B" type="Label" parent="VBoxContainer/控制节点_退出/边缘容器_关闭按钮/垂直容器_关闭按钮/图片按钮_B"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -6.5
+offset_top = -16.0
+offset_right = 6.5
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.09803922, 0.09803922, 0.09803922, 0)
+text = "B"
+
+[node name="文字标签_关闭" type="Label" parent="VBoxContainer/控制节点_退出/边缘容器_关闭按钮/垂直容器_关闭按钮"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "关闭"

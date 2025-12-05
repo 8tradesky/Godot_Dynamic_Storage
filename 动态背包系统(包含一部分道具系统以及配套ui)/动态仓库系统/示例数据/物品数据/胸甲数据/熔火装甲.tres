@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="实体_物品" load_steps=3 format=3 uid="uid://brd4jeblmriws"]
+
+[ext_resource type="Script" uid="uid://fufu01oothuj" path="res://动态仓库系统/脚本/数据脚本/实体数据脚本/实体_物品.gd" id="1_h6d14"]
+[ext_resource type="Texture2D" uid="uid://7q26pq4sd3rm" path="res://动态仓库系统/示例图片/装备图标/胸甲/熔火装甲.png" id="2_o64ws"]
+
+[resource]
+script = ExtResource("1_h6d14")
+"物品种类" = 1
+"物品名称" = "熔火装甲"
+"物品图片" = ExtResource("2_o64ws")
+"防御力" = 100.0
+"价格" = 600
+metadata/_custom_type_script = "uid://fufu01oothuj"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="实体_物品" load_steps=3 format=3 uid="uid://qt31ktxlnb4"]
+
+[ext_resource type="Script" uid="uid://fufu01oothuj" path="res://动态仓库系统/脚本/数据脚本/实体数据脚本/实体_物品.gd" id="1_884ac"]
+[ext_resource type="Texture2D" uid="uid://bjykkpcqlxt8q" path="res://动态仓库系统/示例图片/装备图标/武器/量子破坏者.png" id="2_ht6sq"]
+
+[resource]
+script = ExtResource("1_884ac")
+"物品种类" = 4
+"物品名称" = "量子破坏者"
+"物品图片" = ExtResource("2_ht6sq")
+"攻击力" = 400.0
+"价格" = 500
+metadata/_custom_type_script = "uid://fufu01oothuj"

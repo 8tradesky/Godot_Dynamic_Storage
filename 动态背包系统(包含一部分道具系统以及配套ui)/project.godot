@@ -1,0 +1,28 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="动态背包系统(包含一部分道具系统以及配套UI)"
+run/main_scene="uid://b3u7cfp7dvnuq"
+config/features=PackedStringArray("4.5", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[autoload]
+
+"动态仓库事件"="*res://动态仓库系统/脚本/全局脚本(自动加载)/动态仓库事件.gd"
+"动态仓库数据"="*res://动态仓库系统/脚本/全局脚本(自动加载)/动态仓库数据.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"

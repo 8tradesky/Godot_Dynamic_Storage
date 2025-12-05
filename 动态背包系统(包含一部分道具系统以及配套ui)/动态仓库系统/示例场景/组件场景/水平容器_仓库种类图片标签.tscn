@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwm0josj6aupx"]
+
+[ext_resource type="Texture2D" uid="uid://beu5gpfacsdcs" path="res://动态仓库系统/示例图片/像素风能量盾.png" id="1_n4xmy"]
+[ext_resource type="Script" uid="uid://b6sb770k7y4oh" path="res://动态仓库系统/示例场景/组件场景/水平容器_仓库种类图片标签.gd" id="1_snb3p"]
+
+[node name="水平容器_仓库种类图片标签" type="VBoxContainer"]
+modulate = Color(1, 1, 1, 0.3764706)
+custom_minimum_size = Vector2(70, 74)
+script = ExtResource("1_snb3p")
+
+[node name="中心容器_图标" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+
+[node name="图标按钮" type="TextureButton" parent="中心容器_图标"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture_normal = ExtResource("1_n4xmy")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="色块_背景" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2

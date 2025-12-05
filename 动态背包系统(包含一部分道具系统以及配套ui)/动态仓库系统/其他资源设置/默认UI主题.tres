@@ -1,0 +1,34 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://chwscgfyt5ted"]
+
+[ext_resource type="FontFile" uid="uid://hdg8whx7ypif" path="res://动态仓库系统/字体/SmileySans-Oblique.ttf" id="1_2rjis"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2rjis"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1dgsv"]
+
+[sub_resource type="FontVariation" id="FontVariation_2rjis"]
+base_font = ExtResource("1_2rjis")
+variation_embolden = 0.5
+
+[sub_resource type="FontVariation" id="FontVariation_1dgsv"]
+base_font = ExtResource("1_2rjis")
+variation_embolden = 0.5
+variation_transform = Transform2D(1, 0.235, 0, 1, 0, 0)
+
+[sub_resource type="FontVariation" id="FontVariation_2vjvn"]
+base_font = ExtResource("1_2rjis")
+variation_transform = Transform2D(1, 0.325, 0, 1, 0, 0)
+
+[resource]
+default_font = ExtResource("1_2rjis")
+Button/font_sizes/font_size = 26
+HScrollBar/styles/grabber = SubResource("StyleBoxEmpty_2rjis")
+HScrollBar/styles/scroll = SubResource("StyleBoxEmpty_1dgsv")
+Label/colors/font_shadow_color = Color(0.09998604, 0.099985994, 0.09998598, 0.6509804)
+Label/constants/shadow_offset_x = 2
+Label/constants/shadow_offset_y = 2
+Label/font_sizes/font_size = 26
+RichTextLabel/fonts/bold_font = SubResource("FontVariation_2rjis")
+RichTextLabel/fonts/bold_italics_font = SubResource("FontVariation_1dgsv")
+RichTextLabel/fonts/italics_font = SubResource("FontVariation_2vjvn")
+RichTextLabel/fonts/normal_font = ExtResource("1_2rjis")

@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="实体_玩家" load_steps=21 format=3 uid="uid://cjdf6b05davgn"]
+
+[ext_resource type="Script" uid="uid://x82luoyx7x6s" path="res://动态仓库系统/脚本/数据脚本/实体数据脚本/实体_玩家.gd" id="1_uc1ig"]
+[ext_resource type="Script" uid="uid://fufu01oothuj" path="res://动态仓库系统/脚本/数据脚本/实体数据脚本/实体_物品.gd" id="2_tsrpw"]
+[ext_resource type="Resource" uid="uid://blip0hnlh0rkq" path="res://动态仓库系统/示例数据/物品数据/胸甲数据/量子潜伏者.tres" id="3_dwip7"]
+[ext_resource type="Resource" uid="uid://bis7futb25qlm" path="res://动态仓库系统/示例数据/物品数据/胸甲数据/黑曜石胸甲.tres" id="3_ti4fw"]
+[ext_resource type="Resource" uid="uid://co55xfvylqcg4" path="res://动态仓库系统/示例数据/物品数据/头盔数据/量子侵入者.tres" id="4_bxnaj"]
+[ext_resource type="Resource" uid="uid://b2tecp5y8v8x8" path="res://动态仓库系统/示例数据/物品数据/鞋子数据/量子提速者.tres" id="5_bxnaj"]
+[ext_resource type="Resource" uid="uid://diragykbfgsmt" path="res://动态仓库系统/示例数据/物品数据/弹药数据/量子子弹.tres" id="7_vbl6a"]
+[ext_resource type="Resource" uid="uid://cfuwx37jtj072" path="res://动态仓库系统/示例数据/物品数据/弹射物发射器数据/量子奇袭者.tres" id="8_y1crw"]
+[ext_resource type="Resource" uid="uid://uy86d7rmjdy5" path="res://动态仓库系统/示例数据/物品数据/武器数据/圣光巨剑.tres" id="9_hj6bf"]
+[ext_resource type="Resource" uid="uid://drepvn30rypyr" path="res://动态仓库系统/示例数据/物品数据/武器数据/熔火巨剑.tres" id="10_nunx4"]
+[ext_resource type="Resource" uid="uid://n0opb1o373oa" path="res://动态仓库系统/示例数据/物品数据/武器数据/黏液巨剑.tres" id="11_cd7q7"]
+[ext_resource type="Resource" uid="uid://blnk1hn8npqqn" path="res://动态仓库系统/示例数据/物品数据/胸甲数据/主教长袍.tres" id="12_r20ra"]
+[ext_resource type="Resource" uid="uid://1dpqavmfajui" path="res://动态仓库系统/示例数据/物品数据/胸甲数据/修士长袍.tres" id="13_fad0r"]
+[ext_resource type="Resource" uid="uid://dhfpkdki6b78w" path="res://动态仓库系统/示例数据/物品数据/胸甲数据/圣光装甲.tres" id="14_5gmbr"]
+[ext_resource type="Resource" uid="uid://brd4jeblmriws" path="res://动态仓库系统/示例数据/物品数据/胸甲数据/熔火装甲.tres" id="15_55w03"]
+[ext_resource type="Resource" uid="uid://cbxxdjflmvdxu" path="res://动态仓库系统/示例数据/物品数据/胸甲数据/黏液胸甲.tres" id="16_euo7r"]
+[ext_resource type="Resource" uid="uid://qt31ktxlnb4" path="res://动态仓库系统/示例数据/物品数据/武器数据/量子破坏者.tres" id="18_2trbu"]
+[ext_resource type="Resource" uid="uid://ceaa1fquakr61" path="res://动态仓库系统/示例数据/物品数据/武器数据/黑曜石巨剑.tres" id="19_1ebmo"]
+[ext_resource type="Resource" uid="uid://camqeuvj6dn8k" path="res://动态仓库系统/示例数据/物品数据/饰品数据/量子装负者.tres" id="21_ig7fe"]
+[ext_resource type="Resource" uid="uid://best4cx5miube" path="res://动态仓库系统/示例数据/物品数据/饰品数据/黑曜石之心.tres" id="22_ss6y5"]
+
+[resource]
+script = ExtResource("1_uc1ig")
+"仓库" = Array[ExtResource("2_tsrpw")]([ExtResource("3_ti4fw"), ExtResource("4_bxnaj"), ExtResource("5_bxnaj"), ExtResource("7_vbl6a"), ExtResource("8_y1crw"), ExtResource("9_hj6bf"), ExtResource("10_nunx4"), ExtResource("11_cd7q7"), ExtResource("12_r20ra"), ExtResource("13_fad0r"), ExtResource("14_5gmbr"), ExtResource("15_55w03"), ExtResource("16_euo7r"), ExtResource("4_bxnaj"), ExtResource("18_2trbu"), ExtResource("19_1ebmo"), ExtResource("3_dwip7"), ExtResource("5_bxnaj"), ExtResource("21_ig7fe"), ExtResource("22_ss6y5"), ExtResource("21_ig7fe"), ExtResource("19_1ebmo"), ExtResource("18_2trbu"), ExtResource("21_ig7fe"), ExtResource("4_bxnaj"), ExtResource("21_ig7fe"), ExtResource("19_1ebmo"), ExtResource("5_bxnaj"), ExtResource("18_2trbu"), ExtResource("3_dwip7"), ExtResource("19_1ebmo"), ExtResource("5_bxnaj"), ExtResource("22_ss6y5"), ExtResource("15_55w03"), ExtResource("16_euo7r"), ExtResource("14_5gmbr"), ExtResource("5_bxnaj"), ExtResource("3_dwip7"), ExtResource("14_5gmbr"), ExtResource("14_5gmbr"), ExtResource("14_5gmbr"), ExtResource("14_5gmbr"), ExtResource("14_5gmbr"), ExtResource("14_5gmbr"), ExtResource("14_5gmbr"), ExtResource("14_5gmbr"), ExtResource("14_5gmbr"), ExtResource("14_5gmbr")])
+metadata/_custom_type_script = "uid://x82luoyx7x6s"

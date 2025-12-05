@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="标签种类" load_steps=3 format=3 uid="uid://2nllu0aqgwto"]
+
+[ext_resource type="Script" uid="uid://dbsmy0iws6qrk" path="res://动态仓库系统/脚本/实体物品分类显示.gd" id="1_h1m00"]
+[ext_resource type="Texture2D" uid="uid://hpl270itvkds" path="res://动态仓库系统/示例图片/装备图标/弹射物发射器/弹射物发射器图标.png" id="2_xv35l"]
+
+[resource]
+script = ExtResource("1_h1m00")
+"标签名称" = "弹射物发射器以及弹药"
+"包含的物品种类" = Array[int]([5, 6])
+"标签图标" = ExtResource("2_xv35l")
+metadata/_custom_type_script = "uid://dbsmy0iws6qrk"

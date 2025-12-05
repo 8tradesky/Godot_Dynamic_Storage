@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="实体_物品" load_steps=3 format=3 uid="uid://1dpqavmfajui"]
+
+[ext_resource type="Script" uid="uid://fufu01oothuj" path="res://动态仓库系统/脚本/数据脚本/实体数据脚本/实体_物品.gd" id="1_sjgfq"]
+[ext_resource type="Texture2D" uid="uid://cv6rjs3b1rhdy" path="res://动态仓库系统/示例图片/装备图标/胸甲/修士长袍.png" id="2_4g7at"]
+
+[resource]
+script = ExtResource("1_sjgfq")
+"物品种类" = 1
+"物品名称" = "修士长袍"
+"物品图片" = ExtResource("2_4g7at")
+"防御力" = 50.0
+"价格" = 800
+metadata/_custom_type_script = "uid://fufu01oothuj"

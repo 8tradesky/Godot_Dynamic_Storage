@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://cek1rbhwmgt5g"]
+
+[ext_resource type="Script" uid="uid://cmbm4mgb8485c" path="res://动态仓库系统/示例场景/组件场景/控制节点_仓库物品格_网格调整.gd" id="1_0krb4"]
+[ext_resource type="PackedScene" uid="uid://cekdl0ceoe1ur" path="res://动态仓库系统/示例场景/组件场景/控制节点_仓库物品格.tscn" id="1_qi2jj"]
+
+[node name="控制节点_仓库物品格_网格调整" type="Control"]
+custom_minimum_size = Vector2(82, 82)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 82.0
+offset_bottom = 82.0
+size_flags_horizontal = 3
+script = ExtResource("1_0krb4")
+
+[node name="垂直容器_仓库物品格" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 82.0
+offset_bottom = 82.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="前垂直分隔" type="Control" parent="垂直容器_仓库物品格"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="控制节点_仓库物品格" parent="垂直容器_仓库物品格" instance=ExtResource("1_qi2jj")]
+layout_mode = 2
+
+[node name="后垂直分隔" type="Control" parent="垂直容器_仓库物品格"]
+layout_mode = 2
+size_flags_horizontal = 3

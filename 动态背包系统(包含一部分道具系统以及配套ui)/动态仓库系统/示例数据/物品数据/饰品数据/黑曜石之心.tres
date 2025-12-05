@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="实体_物品" load_steps=3 format=3 uid="uid://best4cx5miube"]
+
+[ext_resource type="Script" uid="uid://fufu01oothuj" path="res://动态仓库系统/脚本/数据脚本/实体数据脚本/实体_物品.gd" id="1_kdmq3"]
+[ext_resource type="Texture2D" uid="uid://bsx4fqk4sl5j" path="res://动态仓库系统/示例图片/装备图标/饰品/黑曜石之心.png" id="2_3lp2m"]
+
+[resource]
+script = ExtResource("1_kdmq3")
+"物品种类" = 8
+"物品名称" = "黑曜石之心"
+"物品图片" = ExtResource("2_3lp2m")
+"攻击力" = 60.0
+"防御力" = 60.0
+"价格" = 600
+metadata/_custom_type_script = "uid://fufu01oothuj"

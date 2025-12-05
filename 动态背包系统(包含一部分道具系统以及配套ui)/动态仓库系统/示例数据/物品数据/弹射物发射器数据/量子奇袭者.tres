@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="实体_物品" load_steps=3 format=3 uid="uid://cfuwx37jtj072"]
+
+[ext_resource type="Script" uid="uid://fufu01oothuj" path="res://动态仓库系统/脚本/数据脚本/实体数据脚本/实体_物品.gd" id="1_e48vc"]
+[ext_resource type="Texture2D" uid="uid://brw0cph5ymag3" path="res://动态仓库系统/示例图片/装备图标/弹射物发射器/量子奇袭者.png" id="2_8rwp2"]
+
+[resource]
+script = ExtResource("1_e48vc")
+"物品种类" = 5
+"物品名称" = "量子奇袭者"
+"物品图片" = ExtResource("2_8rwp2")
+"攻击力" = 500.0
+"价格" = 500
+metadata/_custom_type_script = "uid://fufu01oothuj"
