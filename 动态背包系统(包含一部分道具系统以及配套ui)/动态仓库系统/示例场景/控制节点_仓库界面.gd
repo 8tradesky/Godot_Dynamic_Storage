@@ -189,18 +189,19 @@ func _显示动态文字标签(物品种类标签:Node) -> void:
 			return
 		
 		物品种类标签 = 当前激活物品分类
-		
+	
 	var 按钮 = 物品种类标签.获取种类图片标签按钮()
 	
 	var 图片中心全局X坐标 = 按钮.get_global_position().x + 按钮.get_rect().size.x / 2
-	var 标签X尺寸的一半 = 文字标签_动态文字标签.get_rect().size.x / 2
+	var 标签X尺寸的一半 = 文字标签_动态文字标签.size.x / 2
 	var 标签位置 = Vector2(图片中心全局X坐标 - 标签X尺寸的一半,文字标签_动态文字标签.get_global_position().y)
 	
-	await  get_tree().process_frame
+	if 文字标签_动态文字标签.get_parent().size.x == 0:
+		return
 	文字标签_动态文字标签.set_global_position(标签位置,true)
 	文字标签_动态文字标签.set_text(物品种类标签._标签种类.标签名称)
 	物品种类标签.高亮(true)
-
+	
 func _更新导航显示() -> void:
 	if _当前滚动条页码 == 1:
 		左箭头图片按钮.set_visible(false)
